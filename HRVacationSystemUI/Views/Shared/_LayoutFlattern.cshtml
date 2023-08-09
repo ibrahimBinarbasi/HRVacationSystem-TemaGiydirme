@@ -69,8 +69,10 @@
                     <div class="span12">
                         <div class="headnav">
                             <ul>
-                                <li>@Html.ActionLink("KAYIT OL", "Register", "Login", new { @class = "icon-user" })</li>
-
+                                <li>@Html.ActionLink("Kayıt", "Register", "Login", new { @class = "icon-user" })</li>
+                                <li>
+                                    @Html.ActionLink("Giriş", "SignIn", "Login", new { @class = "icon-user" })
+                                </li>
                             </ul>
                         </div>
                         <!-- Signup Modal -->
