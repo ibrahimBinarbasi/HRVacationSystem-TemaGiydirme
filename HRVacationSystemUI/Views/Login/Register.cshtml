@@ -1,0 +1,49 @@
+﻿@model HRVacationSystemUI.Models.RegisterViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>KAYIT OL</title>
+</head>
+<body>
+    <div>
+
+        @using (Html.BeginForm("Register", "Login", FormMethod.Post))
+        {
+
+            <h4>KAYIT OLABİLRSİNİZ...</h4>
+
+            <label>İsim:</label>
+            @Html.TextBoxFor(x => x.Name) <br />
+
+            <label>Soyisim:</label>
+            @Html.TextBoxFor(x => x.Surname) <br />
+
+            <label>Email:</label>
+            @Html.TextBoxFor(x => x.Email) <br />
+            <label>Şifre:</label>
+            @Html.TextBoxFor(x => x.Password) <br />
+
+
+            <label>Şifre Tekrar:</label>
+            @Html.TextBoxFor(x => x.ConfirmPassword) <br />
+
+            @Html.LabelFor(x => x.BirthDate)
+            @Html.TextBoxFor(x => x.BirthDate, "{0:yyyy-MM-dd}", new { @type = "date", @class = "form-control" }) <br />
+
+            <label>Cinsiyet</label>
+            @Html.DropDownListFor(x => x.GenderPage, (List<SelectListItem>)ViewBag.Genders, new { @class = "form-control" }) <br />
+
+
+            <input type="submit" value="KAYIT OL" class="btn btn-primary" />
+
+        }
+
+    </div>
+</body>
+</html>

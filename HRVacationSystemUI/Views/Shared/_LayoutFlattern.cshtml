@@ -1,0 +1,535 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Human Group</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <!-- css -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700|Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="~/Flattern/css/bootstrap.css" rel="stylesheet"/>
+    <link href="~/Flattern/css/bootstrap-responsive.css" rel="stylesheet" />
+    <link href="~/Flattern/css/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="~/Flattern/css/jcarousel.css" rel="stylesheet" />
+    <link href="~/Flattern/css/flexslider.css" rel="stylesheet" />
+    <link href="~/Flattern/css/style.css" rel="stylesheet" />
+    <!-- Theme skin -->
+    <link href="~/Flattern/skins/default.css" rel="stylesheet" />
+    <!-- boxed bg -->
+    <link id="bodybg" href="bodybg/bg1.css" rel="stylesheet" type="text/css" />
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="~/Flattern/ico/apple-touch-icon-144-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="~/Flattern/ico/apple-touch-icon-114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="~/Flattern/ico/apple-touch-icon-72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" href="~/Flattern/ico/apple-touch-icon-57-precomposed.png" />
+    <link rel="shortcut icon" href="~/Flattern/ico/favicon.png" />
+
+    <!-- =======================================================
+      Theme Name: Flattern
+      Theme URL: https://bootstrapmade.com/flattern-multipurpose-bootstrap-template/
+      Author: BootstrapMade.com
+      Author URL: https://bootstrapmade.com
+    ======================================================= -->
+</head>
+
+<body>
+    <div id="wrapper">
+        <!-- toggle top area -->
+        <div class="hidden-top">
+            <div class="hidden-top-inner container">
+                <div class="row">
+                    <div class="span12">
+                        <ul>
+                            <li><strong>En Başarılı Danışmanlık Firması</strong></li>
+                            <li>İSTANBUL</li>
+                            <li>Bizi Ara <i class="icon-phone"></i> (0216) 688 83 23</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end toggle top area -->
+        <!-- start header -->
+        <header>
+            <div class="container">
+                <!-- hidden top area toggle link -->
+                <div id="header-hidden-link">
+                    <a href="#" class="toggle-link" title="Click me you'll get a surprise" data-target=".hidden-top"><i></i>Open</a>
+                </div>
+                <!-- end toggle link -->
+                <div class="row nomargin">
+                    <div class="span12">
+                        <div class="headnav">
+                            <ul>
+                                <li>@Html.ActionLink("KAYIT OL", "Register", "Login", new { @class = "icon-user" })</li>
+
+                            </ul>
+                        </div>
+                        <!-- Signup Modal -->
+                        <div id="mySignup" class="modal styled hide fade" tabindex="-1" role="dialog" aria-labelledby="mySignupModalLabel" aria-hidden="true">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h4 id="mySignupModalLabel">Create an <strong>account</strong></h4>
+                            </div>
+                            <div class="modal-body">
+                                <form class="form-horizontal">
+                                    <div class="control-group">
+                                        <label class="control-label" for="inputEmail">Email</label>
+                                        <div class="controls">
+                                            <input type="text" id="inputEmail" placeholder="Email">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label" for="inputSignupPassword">Password</label>
+                                        <div class="controls">
+                                            <input type="password" id="inputSignupPassword" placeholder="Password">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label" for="inputSignupPassword2">Confirm Password</label>
+                                        <div class="controls">
+                                            <input type="password" id="inputSignupPassword2" placeholder="Password">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <div class="controls">
+                                            <button type="submit" class="btn">Sign up</button>
+                                        </div>
+                                        <p class="aligncenter margintop20">
+                                            Already have an account? <a href="#mySignin" data-dismiss="modal" aria-hidden="true" data-toggle="modal">Sign in</a>
+                                        </p>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- end signup modal -->
+                        <!-- Sign in Modal -->
+                        <div id="mySignin" class="modal styled hide fade" tabindex="-1" role="dialog" aria-labelledby="mySigninModalLabel" aria-hidden="true">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h4 id="mySigninModalLabel">Login to your <strong>account</strong></h4>
+                            </div>
+                            <div class="modal-body">
+                                <form class="form-horizontal">
+                                    <div class="control-group">
+                                        <label class="control-label" for="inputText">Username</label>
+                                        <div class="controls">
+                                            <input type="text" id="inputText" placeholder="Username">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label" for="inputSigninPassword">Password</label>
+                                        <div class="controls">
+                                            <input type="password" id="inputSigninPassword" placeholder="Password">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <div class="controls">
+                                            <button type="submit" class="btn">Sign in</button>
+                                        </div>
+                                        <p class="aligncenter margintop20">
+                                            Forgot password? <a href="#myReset" data-dismiss="modal" aria-hidden="true" data-toggle="modal">Reset</a>
+                                        </p>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- end signin modal -->
+                        <!-- Reset Modal -->
+                        <div id="myReset" class="modal styled hide fade" tabindex="-1" role="dialog" aria-labelledby="myResetModalLabel" aria-hidden="true">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h4 id="myResetModalLabel">Reset your <strong>password</strong></h4>
+                            </div>
+                            <div class="modal-body">
+                                <form class="form-horizontal">
+                                    <div class="control-group">
+                                        <label class="control-label" for="inputResetEmail">Email</label>
+                                        <div class="controls">
+                                            <input type="text" id="inputResetEmail" placeholder="Email">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <div class="controls">
+                                            <button type="submit" class="btn">Reset password</button>
+                                        </div>
+                                        <p class="aligncenter margintop20">
+                                            We will send instructions on how to reset your password to your inbox
+                                        </p>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- end reset modal -->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span4">
+                        <div class="logo">
+                            <a href="index.html"><img src="img/logo.png" alt="" class="logo" /></a>
+                            <h1>Human Group</h1>
+                        </div>
+                    </div>
+                    <div class="span8">
+                        <div class="navbar navbar-static-top">
+                            <div class="navigation">
+                                <nav>
+                                    <ul class="nav topnav">
+                                        <li class="dropdown">
+                                            <a href="index.html">HAKKIMIZDA <i class="icon-angle-down"></i></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="index-alt2.html">Kurumsal Sosyal Sorumluluk</a></li>
+                                                <li><a href="index-alt3.html">İnsan Kaynakları</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#">YÖNETİCİ <i class="icon-angle-down"></i></a>
+                                            <ul class="dropdown-menu">                                              
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown active">
+                                            <a href="#">GELİŞİM AKADEMİSİ<i class="icon-angle-down"></i></a>
+                                            <ul class="dropdown-menu">
+
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#">MÜŞTERİLERİMİZ <i class="icon-angle-down"></i></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="portfolio-2cols.html">Başarı Öyküleri</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#">BLOG <i class="icon-angle-down"></i></a>
+                                            <ul class="dropdown-menu">
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="contact.html">İLETİŞİM </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <!-- end navigation -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- end header -->
+        <section id="inner-headline">
+            <div class="container">
+                <div class="row">
+                    <div class="span4">
+                        <div class="inner-heading">
+                            <h2>Kullanıcı Giriş</h2>
+                        </div>
+                    </div>
+                    <div class="span8">
+                        <ul class="breadcrumb">
+                            <li><a href="#"><i class="icon-home"></i></a><i class="icon-angle-right"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="content">
+            <div class="container">
+                <div class="row">
+                    <div class="span6">
+                        <h2><strong>Sayın Kullanıcımız,</strong> Hoşgeldiniz</h2>
+                     @RenderBody()
+                    </div>
+                    <div class="span6">
+                        <!-- start flexslider -->
+                        <div class="flexslider">
+                            <ul class="slides">
+                                <li>
+                                    <img src="~/Flattern/img/works/full/image-01-full.jpg" alt="" />
+                                </li>
+                                <li>
+                                    <img src="~/Flattern/img/works/full/image-02-full.jpg" alt="" />
+                                </li>
+                                <li>
+                                    <img src="~/Flattern/img/works/full/image-03-full.jpg" alt="" />
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- end flexslider -->
+                    </div>
+                </div>
+                <!-- divider -->
+                <div class="row">
+                    <div class="span12">
+                        <div class="solidline">
+                        </div>
+                    </div>
+                </div>
+                <!-- end divider -->
+                <div class="row">
+                    <div class="span12">
+                        <h4>Yeteneklerimiz</h4>
+                    </div>
+                    <div class="span3">
+                        <img src="~/Flattern/img/dummies/team1.jpg" alt="" class="img-polaroid" />
+                        <div class="roles">
+                            <p class="lead">
+                                <strong>İbrahim Binarbaşı</strong>
+                            </p>
+                            <p>
+                                Öğrenci
+                            </p>
+                        </div>
+                    </div>
+                    <div class="span3">
+                        <img src="~/Flattern/img/dummies/team1.jpg" alt="" class="img-polaroid" />
+                        <div class="roles">
+                            <p class="lead">
+                                <strong>İbrahim Binarbaşı</strong>
+                            </p>
+                            <p>
+                                Öğrenci
+                            </p>
+                        </div>
+                    </div>
+                    <div class="span3">
+                        <img src="~/Flattern/img/dummies/team1.jpg" alt="" class="img-polaroid" />
+                        <div class="roles">
+                            <p class="lead">
+                                <strong>İbrahim Binarbaşı</strong>
+                            </p>
+                            <p>
+                                Öğrenci
+                            </p>
+                        </div>
+                    </div>
+                    <div class="span3">
+                        <img src="~/Flattern/img/dummies/team1.jpg" alt="" class="img-polaroid" />
+                        <div class="roles">
+                            <p class="lead">
+                                <strong>İbrahim Binarbaşı</strong>
+                            </p>
+                            <p>
+                                Öğrenci
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- divider -->
+                <div class="row">
+                    <div class="span12">
+                        <div class="solidline">
+                        </div>
+                    </div>
+                </div>
+                <!-- end divider -->
+                <div class="row">
+                    <div class="span6">
+                        <h4>Biz Kimiz?</h4>
+                        <div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                                        1. Biz KİMİZ?
+                                    </a>
+                                </div>
+                                <div id="collapseOne" class="accordion-body collapse in">
+                                    <div class="accordion-inner">
+                                        <p>
+                                            Kuruluşundan bu yana yönetici eğitimleri ve seçme yerleştirme konularında başarılı projelere imza atan HumanGroup, 2012’de bu alanlardaki uzmanlığını uluslararası işbirlikleriyle güçlendirdi.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                                        2. UZMANLIK ALANLARIMIZ
+                                    </a>
+                                </div>
+                                <div id="collapseTwo" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <p>
+                                        <p>DEĞERLENDİRME MERKEZİ</p>
+                                        <p>YÖNETİCİ SEÇME YERLEŞTİRME</p>
+                                        <p>GELİŞİM AKADEMİSİ</p>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+                                        3. ADAY DENEYİMLERİ
+                                    </a>
+                                </div>
+                                <div id="collapseThree" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <p>
+                                                İşe alım sürecimde firmanın beklentilerini net ve açık bir şekilde iletiyor olması, firma ve iş tanımı ile ilgili sormuş olduğum sorulara açık ve net cevap veriyor olması, ilk görüşmeden süreç sonlanana kadar gerçekleştirmiş olduğu takip için HUMANGROUP'a şükranlarımı sunarım.
+                                            ŞİRZAT SERTKAYA
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
+                                        4. GÜNÜN SÖZÜ
+                                    </a>
+                                </div>
+                                <div id="collapseFour" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <p>
+                                            İnsanız ve değerliyiz, iş yerimizdeki herkes bizim kadar değerli; ihtiyacımız olan sadece iyi niyet, samimiyet, dürüstlük…
+
+                                            - Gaye Özcan / Genel Müdür -
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span6">
+                        <h4>UZMANLIKLARIMIZ</h4>
+                        <label>İŞE ALIM :</label>
+                        <div class="progress progress-info progress-striped active">
+                            <div class="bar" style="width: 95%">
+                            </div>
+                        </div>
+                        <label>EĞİTİM :</label>
+                        <div class="progress progress-success progress-striped active">
+                            <div class="bar" style="width: 85%">
+                            </div>
+                        </div>
+                        <label>YÖNLENDİRME :</label>
+                        <div class="progress progress-warning progress-striped active">
+                            <div class="bar" style="width: 80%">
+                            </div>
+                        </div>
+                        <label>DANIŞMANLIK :</label>
+                        <div class="progress progress-danger progress-striped active">
+                            <div class="bar" style="width: 90%">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="span3">
+                        <div class="widget">
+                            <h5 class="widgetheading">SAYFALAR</h5>
+                            <ul class="link-list">
+                                <li><a href="https://humangroup.biz/hakkimizda">HAKKIMIZDA</a></li>
+                                <li><a href="https://humangroup.biz/yonetim-akademisi">GELİŞİM AKADEMİSİ</a></li>
+                                <li><a href="https://humangroup.biz/musterilerimiz">MÜŞTERİLERİMİZ</a></li>
+                                <li><a href="https://humangroup.biz/blog">BLOG</a></li>
+                                <li><a href="humangroup@humangroup.biz">İLETİŞİM</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="span3">
+                        <div class="widget">
+                            <h5 class="widgetheading">ÖNEMLİ</h5>
+                            <ul class="link-list">
+                                <li><a href="https://humangroup.biz/blog">BÜLTEN</a></li>
+                                <li><a href="https://humangroup.biz/kisisel-verilerin-korunmasi-politikasi">KVKK</a></li>
+                                <li><a href="https://humangroup.biz/kisisel-verilerin-korunmasi-politikasi">POLİTİKAMIZ</a></li>
+                                <li><a href="https://humangroup.biz/degerlendirme-merkezi">KARİYER</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="span3">
+                        <div class="widget">
+                            <h5 class="widgetheading">BLOG</h5>
+                            <div class="flickr_badge">
+                                <script type="text/javascript" src="https://humangroup.biz/blog"></script>
+                            </div>
+                            <div class="clear">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span3">
+                        <div class="widget">
+                            <h5 class="widgetheading">İLETİŞİM</h5>
+                            <address>
+                                <strong>HumanGroup</strong><br>
+                                Barbaros Mahallesi Mor Menekşe Sok. Deluxia Suites Blok No :3A Daire 214<br>
+                                34746 Ataşehir/İstanbul
+                            </address>
+                            <p>
+                                <i class="icon-phone"></i> (0216) 688 83 23<br>
+                                <i class="icon-envelope-alt"></i> humangroup@biz.com
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sub-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="span6">
+                            <div class="copyright">
+                                <p>
+                                    <span>&copy; HumanGroup - All right reserved.</span>
+                                </p>
+                                <div class="credits">
+                                    <!--
+                                      All the links in the footer should remain intact.
+                                      You can delete the links only if you purchased the pro version.
+                                      Licensing information: https://bootstrapmade.com/license/
+                                      Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Flattern
+                                    -->
+                                    Designed by <a href="https://www.linkedin.com/in/ibrahimbinarbasi//">İbrahimBinarbaşı</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <ul class="social-network">
+                       
+                                <li><a href="https://www.linkedin.com/in/ibrahimbinarbasi/" data-placement="bottom" title="Linkedin"><i class="icon-linkedin icon-square"></i></a></li>
+                     
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <a href="#" class="scrollup"><i class="icon-chevron-up icon-square icon-32 active"></i></a>
+    <!-- javascript
+      ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="~/Flattern/js/jquery.js"></script>
+    <script src="~/Flattern/js/jquery.easing.1.3.js"></script>
+    <script src="~/Flattern/js/bootstrap.js"></script>
+    <script src="~/Flattern/js/jcarousel/jquery.jcarousel.min.js"></script>
+    <script src="~/Flattern/js/jquery.fancybox.pack.js"></script>
+    <script src="~/Flattern/js/jquery.fancybox-media.js"></script>
+    <script src="~/Flattern/js/google-code-prettify/prettify.js"></script>
+    <script src="~/Flattern/js/portfolio/jquery.quicksand.js"></script>
+    <script src="~/Flattern/js/portfolio/setting.js"></script>
+    <script src="~/Flattern/js/jquery.flexslider.js"></script>
+    <script src="~/Flattern/js/jquery.nivo.slider.js"></script>
+    <script src="~/Flattern/js/modernizr.custom.js"></script>
+    <script src="~/Flattern/js/jquery.ba-cond.min.js"></script>
+    <script src="~/Flattern/js/jquery.slitslider.js"></script>
+    <script src="~/Flattern/js/animate.js"></script>
+
+    <!-- Template Custom JavaScript File -->
+    <script src="~/Flattern/js/custom.js"></script>
+
+</body>
+
+</html>
